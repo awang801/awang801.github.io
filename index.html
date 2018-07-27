@@ -246,13 +246,13 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var liftedLogic = {lat: 38.9706, lng: 94.7044};
+  var liftedLogic = {lat: 38.971, lng: -94.704};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: liftedLogic});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: liftedLogic, map: map});
-  styles: [
+      document.getElementById('map'), 
+	  {zoom: 15, 
+	  center: liftedLogic,
+	  	  	styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
@@ -279,7 +279,7 @@ function initMap() {
             {
               featureType: 'road',
               elementType: 'geometry',
-              stylers: [{color: '#38414e'}]
+              stylers: [{color: '#720997'}]
             },
             {
               featureType: 'road',
@@ -294,7 +294,7 @@ function initMap() {
             {
               featureType: 'road.highway',
               elementType: 'geometry',
-              stylers: [{color: '#746855'}]
+              stylers: [{color: '#DA8A17'}]
             },
             {
               featureType: 'road.highway',
@@ -319,12 +319,12 @@ function initMap() {
             {
               featureType: 'water',
               elementType: 'geometry',
-              stylers: [{color: '#17263c'}]
+              stylers: [{color: '08C7CA'}]
             },
             {
               featureType: 'water',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#515c6d'}]
+              stylers: [{color: '08C7CA'}]
             },
             {
               featureType: 'water',
@@ -332,6 +332,15 @@ function initMap() {
               stylers: [{color: '#17263c'}]
             }
           ]
+	  }
+	  );
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({
+	position: liftedLogic, 
+	label: { color: '#FFFFFF', fontWeight: 'bold', fontSize: '14px', text: 'Lifted Logic' },
+	map: map
+	});
+
 }
     </script>
     <!--Load the API from the specified URL
